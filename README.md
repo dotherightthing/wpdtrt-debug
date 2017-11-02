@@ -1,2 +1,3 @@
-# wpdtrt-helpers
-Utilities for use in themes and plugins
+# DTRT Helpers
+
+Utilities for use in themes and plugins.
