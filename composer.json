@@ -1,0 +1,19 @@
+{
+	"name": "dotherightthing/wpdtrt-helpers",
+	"description": "Utilities for use in themes and plugins.",
+	"type": "library",
+    "authors": [
+        {
+            "name": "Dan Smith",
+            "email": "dev@dotherightthing.co.nz"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.30",
+    },
+    "autoload": {
+        "psr-4": {
+            "DoTheRightThing\\WPHelpers\\": "src"
+        }
+    }
+}
