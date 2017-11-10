@@ -12,7 +12,16 @@ namespace DoTheRightThing\WPHelpers;
 if ( !class_exists( 'Helpers' ) ) {
 
   /**
-   * Plugin helpers class
+   * Plugin helpers class.
+   *
+   * @example
+   *  $helpers = new DoTheRightThing\WPHelpers\Helpers;
+   *  $helpers->log('hello world');
+   *
+   *  function destroy() {
+   *    global $helpers;
+   *    $helpers->log('goodbye cruel world');
+   *  }
    *
    * @uses        wpdtrt/debug.php
    *
@@ -31,9 +40,7 @@ if ( !class_exists( 'Helpers' ) ) {
      * @version   1.0.0
      * @since     1.0.0
      */
-    function __construct( $settings ) {
-      //
-    }
+    //function __construct() {}
 
     //// START RENDERERS \\\\
 
@@ -43,7 +50,7 @@ if ( !class_exists( 'Helpers' ) ) {
      * It is strongly recommended that plugin and theme developers use WP_DEBUG
      * in their development environments.
      *
-     * @param mixed $error String or Array
+     * @param mixed $message String or Array
      *
      * @example
      *    // Enable debugging in wp-config.php:
@@ -60,15 +67,15 @@ if ( !class_exists( 'Helpers' ) ) {
      * @see https://codex.wordpress.org/Debugging_in_WordPress
      * @see https://kb.pressable.com/troubleshooting/debug-500-error/
      */
-    public function log( $error )  {
+    public function log( $message )  {
 
       if ( true === WP_DEBUG ) {
 
-        if ( is_array( $log ) || is_object( $log ) ) {
-          error_log( print_r( $log, true ) );
+        if ( is_array( $message ) || is_object( $message ) ) {
+          error_log( print_r( $message, true ) );
         }
         else {
-          error_log( $log );
+          error_log( $message );
         }
       }
     }

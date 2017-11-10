@@ -11,8 +11,4 @@
 	// vendor/autoload.php
 	// composer autoload file used by all vendors
 	require_once dirname( dirname(__DIR__) ) . "/autoload.php";
-	//require __DIR__.'/../vendor/autoload.php';
-
-	use DoTheRightThing\WPHelpers\Helpers;
-
 ?>
