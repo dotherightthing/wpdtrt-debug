@@ -98,6 +98,41 @@ if ( !class_exists( 'Helpers' ) ) {
         }
     }
 
+    /**
+     * Output the calling function in debug.log
+     *
+     * @param string $function_name An identifier for the function or class being debugged
+     * @return string in wp-content/debug.log
+     *
+     * @uses log()
+     *
+     * @see http://php.net/manual/en/function.debug-backtrace.php
+     * @see https://stackoverflow.com/questions/2960805/php-determine-where-function-was-called-from#2960845
+     */
+    public function backtrace( $function_name ) {
+
+      if ( true === WP_DEBUG ) {
+
+        $backtrace = debug_backtrace();
+
+        $backtrace_info = array(
+          'class' => $backtrace[1]['class'],
+          'file' => basename( $backtrace[1]['file'] ),
+          'line' => $backtrace[1]['line'],
+          'function' => $backtrace[2]['function'],
+          //'object' => $backtrace[1]['class'],
+          //'type' => $backtrace[1]['class'],
+          //'args' => $backtrace[1]['class'],
+        );
+
+        $this->log( 'Backtrace: ' . $function_name );
+
+        foreach ( $backtrace_info as $key => $value ) {
+          $this->log( ' ' . $key . ': ' . $value, false);
+        }
+      }
+    }
+
     //// END RENDERERS \\\\
   }
 }
