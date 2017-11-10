@@ -125,9 +125,9 @@ if ( !class_exists( 'Helpers' ) ) {
           'file' => basename( $backtrace[1]['file'] ),
           'line' => $backtrace[1]['line'],
           'function' => $backtrace[2]['function'],
-          //'object' => $backtrace[1]['class'],
-          //'type' => $backtrace[1]['class'],
-          //'args' => $backtrace[1]['class'],
+          //'object' => $backtrace[1]['object'],
+          //'type' => $backtrace[1]['type'],
+          //'args' => $backtrace[1]['args'],
         );
 
         $this->log( 'Backtrace: ' . $function_name );
