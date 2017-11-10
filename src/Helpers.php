@@ -51,6 +51,7 @@ if ( !class_exists( 'Helpers' ) ) {
      * in their development environments.
      *
      * @param mixed $message String or Array
+     * @param boolean $first (true) Flag to output a delimiter if this is the first string in a set
      *
      * @example
      *    // Enable debugging in wp-config.php:
@@ -67,9 +68,13 @@ if ( !class_exists( 'Helpers' ) ) {
      * @see https://codex.wordpress.org/Debugging_in_WordPress
      * @see https://kb.pressable.com/troubleshooting/debug-500-error/
      */
-    public function log( $message )  {
+    public function log( $message, $first = true )  {
 
       if ( true === WP_DEBUG ) {
+
+        if ( $first ) {
+          error_log( '----------' );
+        }
 
         if ( is_array( $message ) || is_object( $message ) ) {
           error_log( print_r( $message, true ) );
