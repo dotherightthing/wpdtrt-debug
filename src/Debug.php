@@ -1,26 +1,26 @@
 <?php
 /**
- * Helpers class.
+ * Debug class.
  *
- * @package   WPHelpers
+ * @package   WPDebug
  * @version   1.0.0
  * @since     1.0.0
  */
 
-namespace DoTheRightThing\WPHelpers;
+namespace DoTheRightThing\WPDebug;
 
-if ( !class_exists( 'Helpers' ) ) {
+if ( !class_exists( 'Debug' ) ) {
 
   /**
-   * Plugin helpers class.
+   * Plugin Debug class.
    *
    * @example
-   *  $helpers = new DoTheRightThing\WPHelpers\Helpers;
-   *  $helpers->log('hello world');
+   *  $debug = new DoTheRightThing\WPDebug\Debug;
+   *  $debug->log('hello world');
    *
    *  function destroy() {
-   *    global $helpers;
-   *    $helpers->log('goodbye cruel world');
+   *    global $debug;
+   *    $debug->log('goodbye cruel world');
    *  }
    *
    * @uses        wpdtrt/debug.php
@@ -28,7 +28,7 @@ if ( !class_exists( 'Helpers' ) ) {
    * @since       1.0.0
    * @version     1.0.0
    */
-  class Helpers {
+  class Debug {
 
     /**
      * This constructor automatically initialises the object's properties
@@ -96,7 +96,7 @@ if ( !class_exists( 'Helpers' ) ) {
      *
      * @see http://php.net/manual/en/exception.gettraceasstring.php
      */
-    public function trace()  {
+    public function stacktrace()  {
 
       if ( true === WP_DEBUG ) {
 
