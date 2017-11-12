@@ -1,6 +1,6 @@
 {
-	"name": "dotherightthing/wpdtrt-helpers",
-	"description": "Utilities for use in themes and plugins.",
+	"name": "dotherightthing/wpdtrt-debug",
+	"description": "Debugging utilities for use in themes and plugins.",
 	"type": "library",
     "authors": [
         {
@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-            "DoTheRightThing\\WPHelpers\\": "src"
+            "DoTheRightThing\\WPDebug\\": "src"
         }
     }
 }

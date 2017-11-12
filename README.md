@@ -1,6 +1,6 @@
-# DTRT Helpers
+# DTRT WP Debug
 
-Utilities for use in themes and plugins.
+Debugging utilities for use in themes and plugins.
 
 ## Usage
 

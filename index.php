@@ -3,7 +3,7 @@
  * PSR-4 Autoloader
  * @see http://phpenthusiast.com/blog/how-to-autoload-with-composer
  *
- * @package   	WPHelpers
+ * @package   	WPDebug
  * @version   	1.0.0
  * @since 		1.0.0
  */
