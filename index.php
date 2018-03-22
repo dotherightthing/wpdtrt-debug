@@ -4,7 +4,7 @@
  * @see http://phpenthusiast.com/blog/how-to-autoload-with-composer
  *
  * @package   	WPDebug
- * @version   	1.0.1
+ * @version   	1.0.0
  * @since 		1.0.0
  */
 
