@@ -1,7 +1,7 @@
 {
-	"name": "dotherightthing/wpdtrt-debug",
-	"description": "Debugging utilities for use in themes and plugins.",
-	"type": "library",
+    "name": "dotherightthing/wpdtrt-debug",
+    "description": "Debugging utilities for use in themes and plugins.",
+    "type": "library",
     "keywords": ["debug", "utility"],
     "license": "ISC",
     "authors": [
